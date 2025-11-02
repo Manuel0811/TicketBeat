@@ -11,8 +11,8 @@ public class Comprador extends Usuario {
     protected List<Reserva> reservas;
     protected Evento eventoSeleccionado;
 
-    public Comprador(Evento eventoSeleccionado, List<Reserva> reservas, String email, int idUsuario, String nombre, String telefono) {
-        super(email, idUsuario, nombre, telefono);
+    public Comprador(Evento eventoSeleccionado, List<Reserva> reservas, String apellido, String cedula, String contrasena, String email, int idUsuario, String nombre, String telefono) {
+        super(apellido, cedula, contrasena, email, idUsuario, nombre, telefono);
         this.eventoSeleccionado = eventoSeleccionado;
         this.reservas = reservas;
     }

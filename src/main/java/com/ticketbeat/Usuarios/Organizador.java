@@ -1,5 +1,6 @@
 package com.ticketbeat.Usuarios;
 
+import com.ticketbeat.Evento;
 import com.ticketbeat.Pagos.Reserva;
 
 import java.util.List;
@@ -9,8 +10,8 @@ public class Organizador extends Usuario {
 
     protected List<String> politicas;
 
-    public Organizador(List<String> politicas, String email, int idUsuario, String nmbre, String telefono) {
-        super(email, idUsuario, nmbre, telefono);
+    public Organizador(List<String> politicas, String apellido, String cedula, String contrasena, String email, int idUsuario, String nombre, String telefono) {
+        super(apellido, cedula, contrasena, email, idUsuario, nombre, telefono);
         this.politicas = politicas;
     }
 
