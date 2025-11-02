@@ -1,9 +1,10 @@
-package Pagos;
+package com.ticketbeat.Pagos;
 
-import Usuarios.Usuario;
-import Boletos.Reserva;
+import com.ticketbeat.Usuarios.Usuario;
+import com.ticketbeat.Boletos.Reserva;
 
 public class Pago {
+
     private boolean estado;
     private Usuario user;
 
@@ -16,4 +17,3 @@ public class Pago {
         return false;
     }
 }
-
