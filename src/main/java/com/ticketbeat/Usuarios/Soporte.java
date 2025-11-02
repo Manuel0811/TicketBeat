@@ -2,8 +2,8 @@ package com.ticketbeat.Usuarios;
 
 public class Soporte extends Usuario {
 
-    public Soporte(String email, int idUsuario, String nombre, String telefono) {
-        super(email, idUsuario, nombre, telefono);
+    public Soporte(String apellido, String cedula, String contrasena, String email, int idUsuario, String nombre, String telefono) {
+        super(apellido, cedula, contrasena, email, idUsuario, nombre, telefono);
     }
 
     public void resolverProblema(String descripcion) {
