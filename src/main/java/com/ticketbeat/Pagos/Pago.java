@@ -1,7 +1,6 @@
 package com.ticketbeat.Pagos;
 
 import com.ticketbeat.Usuarios.Usuario;
-import com.ticketbeat.Boletos.Reserva;
 
 public class Pago {
 
