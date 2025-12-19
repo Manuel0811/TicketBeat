@@ -1,8 +1,8 @@
-package Pagos;
+package com.ticketbeat.Pagos;
 
-import Boletos.Boleto;
-import Boletos.Evento;
-import Usuarios.Usuario;
+import com.ticketbeat.Boletos.*;
+import com.ticketbeat.Usuarios.Usuario;
+import com.ticketbeat.Evento.Evento;
 
 public class Reserva {
     private int timeReserva = 200;

@@ -1,6 +1,6 @@
 package com.ticketbeat.Usuarios;
 
-import com.ticketbeat.Evento;
+import com.ticketbeat.Evento.Evento;
 import com.ticketbeat.Pagos.Reserva;
 import com.ticketbeat.Boletos.Boleto;
 
