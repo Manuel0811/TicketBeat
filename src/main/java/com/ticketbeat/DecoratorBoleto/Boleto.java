@@ -1,51 +1,45 @@
 package com.ticketbeat.Boletos;
-import com.ticketbeat.Evento.Evento;
-import java.util.*;
 
+import java.util.Date;
+
+import com.ticketbeat.Estados.Disponible;
+import com.ticketbeat.Estados.EstadoBoleto;
+import com.ticketbeat.Evento.Evento;
 
 public abstract class Boleto {
+
     protected String artista;
     protected Evento evento;
     protected Date fecha;
     protected EstadoBoleto estado;
     protected int precio;
 
-    public Boleto(String artista, Evento evento, Date fecha, EstadoBoleto estado, int precio) {
+    public Boleto(String artista, Evento evento, Date fecha, int precio) {
         this.artista = artista;
         this.evento = evento;
         this.fecha = fecha;
-        this.estado = estado;
         this.precio = precio;
+        this.estado = new Disponible(); // estado inicial
     }
-    public String getArtista() {
-        return artista;
+
+    // 👉 Delegación al estado
+    public void reservar() {
+        estado.reservar(this);
     }
-    public Evento getEvento() {
-        return evento;
+
+    public void pagar() {
+        estado.pagar(this);
     }
-    public Date getFecha() {
-        return fecha;
+
+    public void cancelar() {
+        estado.cancelar(this);
     }
-    public EstadoBoleto getEstado() {
-        return estado;
-    }
-    public int getPrecio() {
-        return precio;
-    }
+
     public void setEstado(EstadoBoleto estado) {
         this.estado = estado;
     }
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    } 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+
+    public String getEstado() {
+        return estado.getNombre();
     }
-    public void setEvento(Evento evento) {
-        this.evento = evento;
-    }
-    public void setArtista(String artista) {
-        this.artista = artista;
-    }
-    
 }
